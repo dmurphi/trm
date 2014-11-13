@@ -1,0 +1,48 @@
+
+<html>
+<head>
+	<title> TriemliSpital Parkering App</title>
+
+<script type="text/javascript">
+  function getFile(){
+        document.getElementById("upfile").click();
+    }
+    function sub(obj){
+		var file = obj.value;
+		var fileName = file.split("\\");
+		document.getElementById("yourBtn").innerHTML = fileName[fileName.length-1];
+		document.myForm.submit();
+		event.preventDefault();
+	}
+</script>
+<style>
+#yourBtn{
+		position: relative;
+		top: 150px;
+		font-family: calibri;
+		width: 150px;
+		padding: 10px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border: 1px dashed #BBB; 
+		text-align: center;
+		background-color: #DDD;
+		cursor:pointer;
+	}
+</style>
+</head>
+<body>
+
+	<form action="http://localhost:54607/umbraco/surface/FileSurface/UploadFile" method="POST" enctype="multipart/form-data" name="myForm">
+		<!--input type="file" name="FileUpload" accept=".csv"-->
+		 <div id="yourBtn" style="height: 50px; width: 100px;border: 1px dashed #BBB; cursor:pointer;" onclick="getFile()">Click to upload!</div>
+    <!-- this is your file input tag, so i hide it!-->
+    <div style='height: 0px;width:0px; overflow:hidden;'>
+	<input id="upfile" type="file" value="upload" name="FileUpload" onchange="sub(this)"/>
+    </div>
+    <!-- here you can have file submit button or you can write a simple script to upload the file automatically-->
+<!--input type="submit"-->
+	</form>
+
+</body>
+</html>

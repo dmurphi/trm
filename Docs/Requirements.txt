@@ -1,0 +1,78 @@
+Good morning Paul
+
+ 
+
+Yesterday I had a conversation with Mr. Graf from Triemli. The app solution we are on the right track. However, for a decision he needs concrete numbers.
+
+In this project we are in competition with Parkincard.
+
+ 
+
+Project Description:
+
+Manage employee parking
+
+650 years cards
+
+- The aim is to make visible the annual tickets for the control
+
+850 days authorizations receive an annual credit of CHF 50.00
+
+- Credit management of CHF 50.00 which can be abparkiert
+
+ 
+
+Web interface for administrator
+
+- Create a list of employees' whitlsit "
+
+String 1 String 2 String 3 String 4 String 5
+
+Konrollschild code -Name name, first name year grant to credit
+CNP code fullname valid till credit
+
+UR23243 1234 Zgraggen Daniel 50
+UR12031 2345 Zgraggen Sonja 31.12.2014
+
+
+  sorted according to string
+
+- Mutations simply possible (60 mutations per month)
+
+- About 5 administrators possible
+
+- List can "send" to transfer the CNP server
+
+
+employee
+
+- Employees with annual passes have to enter anything
+
+- Staff with day permits can pay by app
+
+- Staff with day permits can pay a web interface like the App
+
+- If the credit is used up, no authorization possible!
+
+
+
+
+
+
+
+
+CNP server
+
+- All employees with annual passes are visible
+                UR12031 Expires: 31.12.2014 24.00 clock
+
+- Daily permits are continuously visible
+                UR23243 Expires: 06.26.2014 14.55 clock
+
+- When the time is up, the number is no longer visible
+
+
+
+Maybe you do not have a good idea how we can solve this, if an employee his second vehicle used with another Farhzeugnummer!
+
+I hope you could shed some light on the whole affair. Looking forward to more info from you. J

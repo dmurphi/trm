@@ -1,0 +1,36 @@
+http://www.w3schools.com/tags/tryit.asp?filename=tryhtml_input_accept
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<form action="demo_form.asp">
+  <input type="file" name="pic" accept=".csv">
+  <input type="submit">
+</form>
+
+<p><strong>Note:</strong> The accept attribute of the input tag is not supported in Internet Explorer 9 and earlier versions.</p>
+<p><strong>Note:</strong> Because of security issues, this example will not allow you to upload files.</p>
+
+</body>
+</html>
+
+
+
+[HttpPost]
+public ActionResult UploadFile(HttpPostedFileBase FileUpload)
+{
+    if (FileUpload.ContentLength > 0) {
+        // there's a file that needs our attention
+        var success = db.UploadProductFile(FileUpload);
+
+        // was everything ok?
+        if (success)
+            return View("UploadSuccess");
+        else
+            return View("UploadFail");
+    }
+
+    return RedirectToAction("Index", new { error = "Please upload a file..." });
+}
